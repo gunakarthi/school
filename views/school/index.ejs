@@ -1,0 +1,89 @@
+<style type="text/css">
+    .Table
+    {
+        display: table;
+        border-collapse: collapse;
+    	width: 100%;
+    }
+    
+    .Heading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+		text-align: left;
+    	padding: 8px;
+    	background-color: #4CAF50;
+ 		color: white;
+
+    }
+    .Row
+    {
+        display: table-row;
+    }
+    .Cell
+    {
+        display: table-cell;
+        width:auto;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .Row:nth-child(even){
+    	background-color: #f2f2f2;
+    }
+
+    @media only screen and (max-device-width: 720px){
+    	.Table{
+            background-color: gray;
+    		width:100%;
+            border-collapse: collapse;
+            display:block;
+    	}
+        
+    }
+
+
+    @media only screen and (max-device-width:400px){
+    	.Table{
+    		width:100%;
+            background-color: pink;
+    	}
+    }
+
+</style>
+
+
+<h1> Students List </h1>
+
+<div class="Table">
+<div class="Heading">
+	 <div class="Cell"><p>School <p></div>
+	 <div class="Cell"><p>Class <p></div>
+	 <div class="Cell"><p>Section <p></div>
+	 
+
+	 <div class="Cell"><p>Show <p></div>
+	 <div class="Cell"><p>Edit <p></div>
+	 <div class="Cell"><p>Delete <p></div>
+</div>
+
+ 
+ <% for(var i=0;i<model.length;i++){ %>
+  <div class="Row">
+
+	 <div class="Cell"><p><%= model[i].school %> <p></div>
+	 <div class="Cell"><p><%= model[i].class %> <p></div>
+	 <div class="Cell"><p><%= model[i].section %> <p></div>
+	 <div class="Cell"><p> <a href="/students/<%= model[i].id %>" >Show</a> <p></div>
+	 <div class="Cell"><p> <a href="/students/<%= model[i].id %>/edit">Edit</a> <p></div>
+	 <div class="Cell"><p> <a href="/students/<%= model[i].id %>/delete">Delete</a> <p></div>
+
+</div>
+
+<% } %>
+
+</div>
+<div>
+<a href="/students/new">Add more</a>

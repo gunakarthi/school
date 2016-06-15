@@ -1,0 +1,127 @@
+<style>
+
+fieldset{
+    width:80%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+input[type=text] {
+    width:45%;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align:center;
+}
+
+input[type=submit] {
+    width:200px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: schoolne;
+    border-radius: 4px;
+    cursor: pointer;
+}
+h1{
+    width:70%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color:white;
+}
+label{
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+    float:left;
+    color:#fff;
+    text-transform: uppercase;
+    font-sty
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #26C6DA;
+    padding: 25px;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    text-align:center;
+}
+
+
+@media screen and (max-width: 800px){
+    div{
+        background-color: yellow;
+    }
+
+    h1{
+        width:70%;
+        text-align:center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    input[type=text]{
+        width:75%;
+    }
+    label{
+        display:schoolne;
+    }
+}
+
+
+@media screen and (max-width: 450px){
+    div{
+        background-color: green;
+
+    }
+    h1{
+        width:70%;
+        text-align:center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    input[type=text]{
+        width:90%;
+    }
+
+    label{
+        display:schoolne;
+    }
+}
+
+
+@media screen and (max-width: 350px){
+    div{
+        display:none;
+
+    }
+    
+}
+</style>
+<div>
+<h1> STUDENTS SHOW</h1>
+<form >
+<fieldset>
+<label>School</label><input type="text" name="school" value="<%= model.school %>"><br>
+<label>Class</label><input type="text" name="class" value="<%= model.class %>"><br>
+
+<label>Section</label><input type="text" name="section" value="<%= model.section %>"><br>
+
+</form>
+
+
+<a href="/students">Back</a>
+</div>
